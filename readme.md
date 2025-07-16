@@ -2,7 +2,7 @@
 
 VARLite is an interactive offside detection pipeline for single-camera football broadcasts, built on top of YOLOv8n and enhanced with vanishing-point geometry, HSV-based color clustering for team identification, and real-time image processing.
 
-![demo](output3.png) <!-- You can add a sample output GIF/screenshot here -->
+![demo](demo/output3.png) <!-- You can add a sample output GIF/screenshot here -->
 
 ---
 
