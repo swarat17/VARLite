@@ -1,0 +1,8 @@
+
+    path: SoccerNet\england_epl\2014-2015\2015-02-21 - 18-00 Chelsea 1 - 1 Burnley\dataset
+    train: images/train
+    val: images/valid
+
+    nc: 2  # Number of classes (Player team left, Player team right)
+    names: ['Player team left', 'Player team right']
+    
