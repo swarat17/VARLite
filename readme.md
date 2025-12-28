@@ -21,12 +21,15 @@ VARLite is an interactive offside detection pipeline for single-camera football 
 
 ```
 .
-├── Code.ipynb                # Final offside detection notebook
-├── runs/                     # YOLO training outputs
-├── model_weights.pt          # Final trained YOLOv8n model (you must export this)
-├── Labels-v3.json            # SoccerNet-v3 annotated dataset (if used for testing)
-├── demo/                     # Optional demo images or output visuals
-└── README.md                 # This file
+├── Code.ipynb                # Main offside detection notebook
+├── test.ipynb                # Additional test notebook
+├── Labels-v3.json            # SoccerNet-v3 annotated dataset
+├── readme.md                 # This file
+├── runs/                     # YOLO training and detection outputs
+│   ├── detect/               # Detection results on test images
+│   └── train/                # Training results with model weights
+├── Demo Outputs/             # Demo images and output visuals
+├── Test Images/              # Test images for detection
 ```
 
 ---
@@ -53,20 +56,16 @@ VARLite is an interactive offside detection pipeline for single-camera football 
 
 ### 🔧 Setup
 
-```bash
-git clone https://github.com/yourusername/varlite-offside.git
-cd varlite-offside
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-Contents of `requirements.txt`:
+Install the required packages:
 
 ```
 ultralytics
 opencv-python
 numpy
+```
+
+```bash
+pip install ultralytics opencv-python numpy
 ```
 
 ---
@@ -75,11 +74,7 @@ numpy
 
 ### 1. Run Offside Detection
 
-Make sure your image is named (e.g. `4.png`) and located in the root folder.
-
-```bash
-python main.py
-```
+Open the `Code.ipynb` notebook in Jupyter and run the cells. Place test images in the `Test Images/` folder.
 
 You will be prompted to click on one player from each team (left/right) in an interactive window. The final offside decision and overlays will be shown.
 
